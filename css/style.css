@@ -12,8 +12,12 @@ body {
     box-sizing: border-box;
   }
 a {
-    color: #1dbf73;
+    color: #131d23;
     transition: 0.3s;
+}
+@font-face {
+    font-family: norwester;
+    src:url("../norwester.regular.otf");
 }
 
 a:hover,
@@ -102,6 +106,11 @@ h6 {
     transition: all 0.3s;
 }
 
+.servicenow-header{
+    font-size: 55px;
+    font-family: norwester;
+    color: #fff;
+}
 .header .logo {
     float: left;
 }
@@ -145,7 +154,7 @@ h6 {
 
 .slider .carousel-item::before {
     content: '';
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -184,19 +193,38 @@ h6 {
 }
 
 .slider h2 {
-    color: #ffffff;
+    color: #46bb22;
     margin-bottom: 30px;
-    font-size: 64px;
-    font-weight: 800;
-    letter-spacing: 1px;
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    font-family: norwester;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0px;
 }
+
+.defend-txt{
+    font-size: 55px;
+    font-family: norwester;
+    color: #2c3b43;
+}
+/* .defend-txt:before,.defend-txt::after {
+    content: "\a ";
+    white-space: pre;
+  } */
 
 .slider p {
     width: 80%;
     margin: 0 auto 30px auto;
-    color: #ffffff;
+    color: #2c3b43;
 }
 
+.slider .servicenow-p {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    color: #fff;
+}
 .slider .carousel-fade {
     overflow: hidden;
 }
@@ -215,7 +243,7 @@ h6 {
 .slider .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
 .slider .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
     opacity: 1;
-    transition: 0.3s;
+    transition: 100s;
 }
 
 .slider .carousel-fade .carousel-inner .carousel-item-next,
@@ -247,13 +275,14 @@ h6 {
     display: inline-block;
     padding: 10px 30px;
     transition: 0.3s;
-    background: #1dbf73;
+    background: #2c3b48;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border-radius: 10px;
 }
 
 .slider .btn-get-started:hover {
@@ -261,8 +290,21 @@ h6 {
     color: #1dbf73;
 }
 
+.servicenow-o{
+    color: #46bb22;
+}
 
-
+.servicenow-txt{
+    font-weight: bold;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 80px;
+}
+.subtitle-txt{
+    font-weight: bold;
+    color: #2c3b43;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 80px;
+}
 /* ------------------ Menu Style ------------------- */
 #nav-menu-container {
     float: right;
@@ -320,7 +362,10 @@ h6 {
 
 .nav-menu li:hover > a,
 .nav-menu > .menu-active > a {
-    color: #1dbf73;
+    z-index: 4;
+    background-color: #ddd;
+    color: dodgerblue;
+    transition: 0.3s;
 }
 
 .nav-menu > li {
@@ -340,7 +385,7 @@ h6 {
 
 .nav-menu ul li a {
     padding: 5px 10px;
-    color: #353535;
+    color: #1dbf73;
     transition: 0.3s;
     display: block;
     font-size: 14px;
@@ -1532,7 +1577,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     .slider p {
-        width: 60%;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 45px;
+        text-transform: uppercase;
     }
 
     .slider .carousel-control-prev,

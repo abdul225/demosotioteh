@@ -67,14 +67,15 @@
     var carouselIndicators = $(".carousel-indicators");
     carousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
         (index === 0) ?
-                carouselIndicators.append("<li data-target='#carousel' data-slide-to='" + index + "' class='active'></li>") :
+                carouselIndicators.append("<li data-target='#carousel' data-slide-to='" + index + "' class=''></li>") :
                 carouselIndicators.append("<li data-target='#carousel' data-slide-to='" + index + "'></li>");
 
         $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') + "')");
         $(this).children('.carousel-background').remove();
     });
-
+    
     $(".carousel").swipe({
+        autoplay: false,
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
             if (direction == 'left')
                 $(this).carousel('next');
@@ -83,6 +84,12 @@
         },
         allowPageScroll: "vertical"
     });
+
+    // $(".carousel").owlCarousel({
+    //     autoplay: false,
+    //     responsive: {0: {items: 1}, 768: {items: 1}, 900: {items: 1}
+    //     }
+    // });
 
     // Skills section
     $('.skills').waypoint(function () {
@@ -112,7 +119,7 @@
 
     // Clients carousel
     $(".clients-carousel").owlCarousel({
-        autoplay: true,
+        autoplay: false,
         dots: true,
         loop: true,
         responsive: {0: {items: 2}, 768: {items: 4}, 900: {items: 6}
